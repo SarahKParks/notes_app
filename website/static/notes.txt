@@ -1,0 +1,11 @@
+javascript, images, css (things that don't change) go in the static folder
+
+can then be loaded into html with (in the body tag):
+
+<script
+    type="text/javascript"
+    src="{{url_for('static', filename="index.js)}}"
+></script>
+
+url_for loads the url for the static folder
+{{}} means we'll write a python expression
