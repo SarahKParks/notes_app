@@ -3,5 +3,65 @@
 {% block title %}Sign-Up{% endblock %}
 
 {% block content %}
-<h1>This is the sign-up page</h1>
+<!-- when we submit this form, send a POST request to the server backend -->
+<form method="POST">
+    <h3 align="center">Sign-up</h3>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+
+         <!-- use name to represent fields when sent to the backend-->
+        <input 
+            type="email" 
+            class="form-control" 
+            id="email" 
+            name="email"
+            placeholder="john.doe@xyz.com"
+        />
+
+    </div>
+
+    <div class="form-group">
+        <label for="first_name">First Name</label>
+
+        <input 
+            type="text" 
+            class="form-control" 
+            id="first_name" 
+            name="first_name"
+            placeholder="John"
+        />
+
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+
+        <input 
+            type="password" 
+            class="form-control" 
+            id="password" 
+            name="password"
+            placeholder="password"
+        />
+
+    </div>
+
+    <div class="form-group">
+        <label for="confirm_password">Confirm Password</label>
+
+        <input 
+            type="password" 
+            class="form-control" 
+            id="confirm_password" 
+            name="confirm_password"
+            placeholder="password"
+        />
+
+    </div>
+
+    <br />
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 {% endblock %}

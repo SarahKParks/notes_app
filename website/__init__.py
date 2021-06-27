@@ -5,7 +5,7 @@ from flask import Flask
 # initalize Flask
 def create_app():
     app = Flask(__name__)
-    app.config['KEY'] = '' # to encrypt session data, not for production
+    app.config['SECRET_KEY'] = '1' # to encrypt session data, not for production
     
     # register Blueprints w/ location
     from .views import views
